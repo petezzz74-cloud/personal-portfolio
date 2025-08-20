@@ -3,63 +3,277 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Portfolio</title>
-  <!-- Link to external CSS -->
+  <title>Peter Nganga - Frontend Developer</title>
   <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background: #005F52;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-text {
+      flex: 1 1 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    .hero-text h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-top: -10px;
+    }
+
+    .hero-text p {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .hero-text .btn {
+      background: white;
+      color: #005F52;
+      padding: 12px 24px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .hero-image img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .about {
+      background: #111111;
+      padding: 80px 20px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .about-text {
+      flex: 1 1 55%;
+      color: #fff;
+    }
+
+    .about-text h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .skills {
+      margin-top: 30px;
+    }
+
+    .skill {
+      margin-bottom: 10px;
+    }
+
+    .skill-title {
+      font-weight: 600;
+    }
+
+    .skill-bar {
+      background: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 8px;
+      background: linear-gradient(to right, #ff006a, orange);
+    }
+
+    .hero-about-image img {
+      width: 300px;
+      border-radius: 20px;
+    }
+
+    .stats {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      color: #ff006a;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .stats div {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .stats div span {
+      display: block;
+      color: white;
+      font-size: 14px;
+      font-weight: normal;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image img, .hero-about-image img {
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>John Doe</h1>
-    <p>Web Developer | Designer | Programmer</p>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm John, a passionate web developer creating modern and responsive websites.</p>
-    </section>
+  <div class="container hero">
+    <div class="hero-text">
+      <h1>Peter Nganga</h1>
+      <h2>Frontend Developer</h2>
+      <p>Hi, I’m Peter — a passionate frontend developer who loves crafting clean, modern, and responsive web experiences. I enjoy turning ideas into reality through code, blending creativity with functionality.</p>
+      <a href="#" class="btn">Download CV</a>
+    </div>
+    <div class="hero-image">
+      <img src="img/OIP.webp" alt="Peter Avatar">
+    </div>
+  </div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>My Projects</h2>
-      <div class="projects-container">
-        <div class="project">
-          <h3>Project 1</h3>
-          <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
+  <div class="about">
+    <div class="container about-content">
+      <div class="hero-about-image">
+        <img src="img/OIP.webp" alt="Peter Avatar 2">
+      </div>
+      <div class="about-text">
+        <h2>About <span style="color:#ff006a;">me</span></h2>
+        <p>I am an experienced Frontend Developer with several years of professional expertise. Throughout my career, I’ve had the privilege of collaborating with amazing teams, helping businesses grow through clean, modern, and responsive web solutions.</p>
+        <p>My passion for frontend development is reflected in both my skills and the dedication I bring to every project. I believe in blending creativity with functionality to build outstanding digital experiences.</p>
+
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-title">HTML & CSS</div>
+            <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">React JS</div>
+            <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">JavaScript</div>
+            <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">Next JS</div>
+            <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+          </div>
         </div>
-        <div class="project">
-          <h3>Project 2</h3>
-          <p>An interactive web app using APIs to fetch real-time data.</p>
-        </div>
-        <div class="project">
-          <h3>Project 3</h3>
-          <p>A CSS animation demo showcasing creative UI components.</p>
+
+        <div class="stats">
+          <div>10+<span>Years of Experience</span></div>
+          <div>90+<span>Projects Completed</span></div>
+          <div>15+<span>Happy Clients</span></div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+  <!-- About Section Ends -->
+  </div>
+</div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: john.doe@example.com</p>
-      <p>Phone: +123 456 7890</p>
-      <p>Follow me on:
-        <a href="#">LinkedIn</a> |
-        <a href="#">GitHub</a>
-      </p>
-    </section>
-  </main>
+<!-- Services Section Starts -->
+<div class="services">
+  <div class="container">
+    <h2>My <span style="color:#ff006a;">Services</span></h2>
+    <div class="services-content">
 
-  <footer>
-    <p>&copy; 2025 John Doe. All rights reserved.</p>
-  </footer>
+      <div class="service-card">
+        <h3>🌐 Web Development</h3>
+        <p>I build responsive, modern, and user-friendly websites tailored to client needs using the latest technologies.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🎨 UI/UX Design</h3>
+        <p>I create clean and intuitive designs that ensure seamless user experiences across all devices.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>⚡ Performance Optimization</h3>
+        <p>I optimize websites for speed, SEO, and scalability, ensuring fast load times and higher engagement.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Services Section Ends -->
+<!-- Portfolio Section Starts -->
+<div class="portfolio">
+  <div class="container">
+    <h2>My <span style="color:#ff006a;">Portfolio</span></h2>
+    <div class="portfolio-content">
+
+      <div class="portfolio-card">
+  <img src="img/landing-page.jpg" alt="Landing Page Project">
+  <div class="portfolio-info">
+    <h3>Landing Page</h3>
+    <p>A modern responsive landing page built with HTML, CSS, and JavaScript.</p>
+  </div>
+</div>
+
+      <div class="portfolio-card">
+  <img src="img/ecommerce.jpg" alt="E-commerce Website Project">
+  <div class="portfolio-info">
+    <h3>E-commerce Website</h3>
+    <p>Frontend with product listings, cart, and checkout UI.</p>
+  </div>
+</div>
+
+      <div class="portfolio-card">
+  <img src="img/imgoipo.web" alt="Portfolio Website Project">
+  <div class="portfolio-info">
+    <h3>Portfolio Website</h3>
+    <p>A personal portfolio built with modern responsive design techniques.</p>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <!-- Portfolio Section Ends -->
+
 </body>
 </html>
+
+</body>
+</html>
+

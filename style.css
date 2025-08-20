@@ -1,66 +1,133 @@
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #333;
+body {
+  font-family: "Poppins", sans-serif;
+  background: lightblue; /* or background: #add8e6; */
   color: #fff;
-  padding: 20px 0;
+  line-height: 1.6;
+}
+
+
+/* Section Title */
+.section-title {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.section-title span {
+  color: #ff0077; /* highlight like in your screenshot */
 }
 
-header nav ul {
-  list-style: none;
-  padding: 0;
+/* About Section */
+.about {
+  padding: 4rem 10%;
 }
 
-header nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-header nav ul li a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-.projects-container {
+.about-container {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
-.project {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 5px;
-  flex: 1 1 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.about-image img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
+.about-text {
+  flex: 1;
+}
+
+/* Skills */
+.skills {
+  margin-top: 1.5rem;
+}
+.skill {
+  margin-bottom: 1rem;
+}
+.skill p {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.progress {
+  background:#333;
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #ff0077, #ff7f00);
+  border-radius: 10px;
+}
+
+/* Stats */
+.about-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
   text-align: center;
-  padding: 15px 0;
+}
+.stat h3 {
+  font-size: 2rem;
+  color: #ff0077;
+}
+.stat p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.portfolio {
+  background: #111111;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-card {
+  background: #222;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-info h3 {
+  color: #ff006a;
+  margin-bottom: 10px;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
